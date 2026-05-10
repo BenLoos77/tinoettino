@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Bandwerk × TINOetTINO — Strategische Kooperation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e10;
+    --bg-card: #16161a;
+    --bg-elevated: #1c1c21;
+    --border: #2a2a30;
+    --gold: #c9a961;
+    --gold-soft: #b08d4a;
+    --gold-faint: rgba(201, 169, 97, 0.12);
+    --gold-bright: #d4b574;
+    --text: #ededed;
+    --text-soft: #9a9a9a;
+    --text-faint: #6b6b6b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+  }
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 80px 48px;
+  }
+
+  /* HERO */
+  .hero {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 64px;
+    margin-bottom: 96px;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+  h1 .x {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 8px;
+  }
+  .lead {
+    font-size: 18px;
+    color: var(--text-soft);
+    max-width: 720px;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* PART DIVIDER */
+  .part-divider {
+    margin: 120px 0 64px 0;
+    text-align: center;
+    position: relative;
+  }
+  .part-divider::before, .part-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 140px);
+    height: 1px;
+    background: var(--border);
+  }
+  .part-divider::before { left: 0; }
+  .part-divider::after { right: 0; }
+  .part-label {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.4em;
+    font-style: italic;
+    text-transform: uppercase;
+    background: var(--bg);
+    padding: 0 24px;
+    position: relative;
+  }
+
+  /* SECTIONS */
+  section { margin-bottom: 96px; }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--gold);
+    font-style: italic;
+    line-height: 1;
+    min-width: 44px;
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.15;
+    color: #fff;
+    letter-spacing: -0.005em;
+  }
+  .section-intro {
+    font-size: 15px;
+    color: var(--text-soft);
+    max-width: 720px;
+    margin-left: 68px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  /* CHART CARD */
+  .chart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 48px;
+    margin-left: 68px;
+  }
+  .chart-card svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* TAKEAWAY */
+  .takeaway {
+    margin-left: 68px;
+    margin-top: 24px;
+    padding: 24px 32px;
+    background: var(--gold-faint);
+    border-left: 2px solid var(--gold);
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 300;
+    font-style: italic;
+  }
+  .takeaway strong {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+  }
+
+  /* ASSET GRID */
+  .asset-grid {
+    margin-left: 68px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .asset-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    transition: border-color 0.2s;
+  }
+  .asset-card:hover { border-color: var(--gold-soft); }
+  .asset-card-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .asset-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 500;
+  }
+  .asset-title {
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .asset-list {
+    list-style: none;
+    font-size: 14px;
+    color: var(--text-soft);
+    font-weight: 300;
+  }
+  .asset-list li {
+    padding: 6px 0;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .asset-list li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 18px;
+    line-height: 1;
+    top: 8px;
+  }
+
+  /* QUOTE BLOCK */
+  .quote-block {
+    margin-left: 68px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .quote-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 36px 32px;
+    position: relative;
+  }
+  .quote-mark {
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    color: var(--gold);
+    line-height: 1;
+    opacity: 0.4;
+  }
+  .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: 36px;
+    margin-bottom: 24px;
+  }
+  .quote-author {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .quote-name {
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .quote-role {
+    font-size: 11px;
+    color: var(--text-faint);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  /* OPPORTUNITY LIST */
+  .opp-list {
+    margin-left: 68px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .opp-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    align-items: start;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .opp-item:hover {
+    border-color: var(--gold-soft);
+    background: var(--bg-elevated);
+  }
+  .opp-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    color: var(--gold);
+    font-weight: 500;
+    line-height: 1;
+    font-style: italic;
+  }
+  .opp-content h3 {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .opp-content p {
+    font-size: 14px;
+    color: var(--text-soft);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* STATUS BOX */
+  .status-grid {
+    margin-left: 68px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .status-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--gold);
+    border-radius: 4px;
+    padding: 24px 28px;
+  }
+  .status-item .label {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .status-item p {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 300;
+    line-height: 1.55;
+  }
+
+  /* CUSTOM JOURNEY */
+  .journey {
+    margin-left: 68px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 56px 48px;
+  }
+  .journey-intro {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .journey-intro .label {
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .journey-intro h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.2;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .journey-intro h3 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .journey-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    position: relative;
+  }
+  .journey-steps::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-soft), transparent);
+    z-index: 0;
+  }
+  .journey-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .journey-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 500;
+  }
+  .journey-step .step-label {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .journey-step .step-text {
+    font-size: 13px;
+    color: var(--text-soft);
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  .journey-outro {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #fff;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .journey-outro .gold {
+    color: var(--gold);
+  }
+
+  /* FORMULA */
+  .formula {
+    margin: 80px auto;
+    text-align: center;
+    padding: 64px 32px;
+    background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg) 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .formula-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: -0.01em;
+  }
+  .formula-text .gold { color: var(--gold); font-style: italic; }
+  .formula-caption {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--text-soft);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 120px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-faint);
+    line-height: 1.7;
+  }
+  footer .label {
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; color: #000; }
+    .chart-card, .asset-card, .opp-item, .status-item, .quote-card, .journey { background: #fff; border-color: #ddd; page-break-inside: avoid; }
+    section, .formula { page-break-inside: avoid; }
+    h1, h2, .asset-title, .opp-content h3, .quote-text, .journey-intro h3, .journey-outro { color: #000; }
+    .lead, .section-intro, .takeaway, .opp-content p, .asset-list, .status-item p, .step-text { color: #333; }
+    .formula { background: #fff; }
+    .part-divider::before, .part-divider::after { background: #ccc; }
+    .part-label { background: #fff; }
+  }
+
+  @media (max-width: 768px) {
+    .container { padding: 48px 24px; }
+    h1 { font-size: 40px; }
+    h2 { font-size: 28px; }
+    .chart-card, .section-intro, .takeaway, .asset-grid, .opp-list, .status-grid, .quote-block, .journey { margin-left: 0; padding: 24px; }
+    .asset-grid, .status-grid, .quote-block { grid-template-columns: 1fr; }
+    .opp-item { grid-template-columns: 40px 1fr; padding: 20px; }
+    .formula-text { font-size: 32px; }
+    .journey-steps { grid-template-columns: 1fr; }
+    .journey-steps::before { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow">Strategische Kooperation · Pitch</div>
+    <h1>Bandwerk <span class="x">×</span> TINOetTINO</h1>
+    <p class="lead">Zwei komplementäre Premium-Marken treffen sich am selben Handgelenk. Eine Partnerschaft, die Sortiment, Vertriebsnetzwerk und Markenwert beider Häuser substantiell hebt.</p>
+  </header>
+
+  <!-- ============================ -->
+  <!-- PART 1: MARKTANALYSE        -->
+  <!-- ============================ -->
+  <div class="part-divider">
+    <span class="part-label">Teil I — Die Marktlogik</span>
+  </div>
+
+  <!-- SECTION 1 -->
+  <section>
+    <div class="section-head">
+      <div class="section-num">I</div>
+      <h2>Demografische Überlappung</h2>
+    </div>
+    <p class="section-intro">Rolex-Käufer und Apple-Käufer beschreiben weitgehend dieselbe Personengruppe — nur durch unterschiedliche Produktlinsen betrachtet.</p>
+
+    <div class="chart-card">
+      <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="rolexGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#c9a961" stop-opacity="0.28"/>
+            <stop offset="100%" stop-color="#c9a961" stop-opacity="0.08"/>
+          </radialGradient>
+          <radialGradient id="appleGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#8a8a90" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#8a8a90" stop-opacity="0.06"/>
+          </radialGradient>
+        </defs>
+
+        <text x="190" y="60" font-family="'Cormorant Garamond', serif" font-size="13" fill="#c9a961" letter-spacing="3" font-weight="500">ROLEX-KÄUFER</text>
+        <text x="710" y="60" font-family="'Cormorant Garamond', serif" font-size="13" fill="#9a9a9a" letter-spacing="3" font-weight="500" text-anchor="end">APPLE-KÄUFER</text>
+
+        <text x="190" y="78" font-family="Inter, sans-serif" font-size="10" fill="#6b6b6b" font-style="italic">Teads/EssenceMediacom · Chrono24/YouGov</text>
+        <text x="710" y="78" font-family="Inter, sans-serif" font-size="10" fill="#6b6b6b" font-style="italic" text-anchor="end">CIRP · Counterpoint · Statista</text>
+
+        <circle cx="345" cy="310" r="195" fill="url(#rolexGrad)" stroke="#c9a961" stroke-width="1" stroke-opacity="0.6"/>
+        <circle cx="555" cy="310" r="195" fill="url(#appleGrad)" stroke="#8a8a90" stroke-width="1" stroke-opacity="0.6"/>
+
+        <g font-family="Inter, sans-serif" font-size="13" fill="#ededed" font-weight="300">
+          <text x="180" y="220">2/3 männlich</text>
+          <text x="180" y="248">35–49 Jahre</text>
+          <text x="180" y="276">4.000 € aufwärts</text>
+          <text x="180" y="304">Status-orientiert</text>
+          <text x="180" y="332">Anlass-Kauf</text>
+          <text x="180" y="360">Westliche Premium-Märkte</text>
+        </g>
+
+        <g font-family="Inter, sans-serif" font-size="13" fill="#ededed" font-weight="300" text-anchor="end">
+          <text x="720" y="220">Millennials &amp; Gen X</text>
+          <text x="720" y="248">25–49 Jahre</text>
+          <text x="720" y="276">Mittlere–obere Einkommen</text>
+          <text x="720" y="304">Premium-Tech-Affinität</text>
+          <text x="720" y="332">Hohe Markenloyalität</text>
+          <text x="720" y="360">Urbane Industrieländer</text>
+        </g>
+
+        <text x="450" y="225" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="14" fill="#c9a961" letter-spacing="3" font-weight="500">SCHNITTMENGE</text>
+        <line x1="410" y1="240" x2="490" y2="240" stroke="#c9a961" stroke-width="0.8" stroke-opacity="0.5"/>
+
+        <g font-family="Inter, sans-serif" font-size="13" fill="#fff" font-weight="400" text-anchor="middle">
+          <text x="450" y="270">Männlich, 35–49</text>
+          <text x="450" y="293">Hohes Einkommen</text>
+          <text x="450" y="316">Premium-affin</text>
+          <text x="450" y="339">Statusbewusst</text>
+          <text x="450" y="362">Urban</text>
+          <text x="450" y="385">Westliche Märkte</text>
+        </g>
+
+        <text x="450" y="535" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b6b6b" font-style="italic">Eine direkte Schnittmengenstudie existiert nicht öffentlich — die Profile sind jedoch praktisch deckungsgleich.</text>
+      </svg>
+    </div>
+
+    <div class="takeaway"><strong>Erkenntnis —</strong> Wir sprechen nicht zwei verschiedene Zielgruppen an, sondern dieselbe Person zu unterschiedlichen Anlässen.</div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section>
+    <div class="section-head">
+      <div class="section-num">II</div>
+      <h2>Größe der Doppelnutzer-Gruppe</h2>
+    </div>
+    <p class="section-intro">Doppelnutzer sind kein Nischenphänomen — bereits ein Viertel des globalen Uhrenmarktes trägt traditionelle Uhr und Smartwatch parallel.</p>
+
+    <div class="chart-card">
+      <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="softGlow">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <g transform="translate(280, 280)">
+          <circle r="130" fill="none" stroke="#1c1c21" stroke-width="56"/>
+          <circle r="130" fill="none" stroke="#c9a961" stroke-width="56"
+                  stroke-dasharray="204.2 612.6" stroke-dashoffset="0"
+                  transform="rotate(-90)" filter="url(#softGlow)"/>
+          <circle r="130" fill="none" stroke="#5a5a62" stroke-width="56"
+                  stroke-dasharray="245.0 571.8" stroke-dashoffset="-204.2"
+                  transform="rotate(-90)"/>
+          <circle r="130" fill="none" stroke="#8a7644" stroke-width="56"
+                  stroke-dasharray="212.4 604.4" stroke-dashoffset="-449.2"
+                  transform="rotate(-90)"/>
+          <circle r="130" fill="none" stroke="#2a2a30" stroke-width="56"
+                  stroke-dasharray="155.2 661.6" stroke-dashoffset="-661.6"
+                  transform="rotate(-90)"/>
+
+          <text x="0" y="-12" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="48" fill="#c9a961" font-weight="500" font-style="italic">25%</text>
+          <text x="0" y="14" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#9a9a9a" letter-spacing="2.5" font-weight="400">DOPPELNUTZER</text>
+          <line x1="-30" y1="24" x2="30" y2="24" stroke="#c9a961" stroke-width="0.5" stroke-opacity="0.5"/>
+          <text x="0" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6b6b6b" font-weight="300">global · alle Altersgruppen</text>
+        </g>
+
+        <g transform="translate(540, 100)" font-family="Inter, sans-serif">
+          <line x1="0" y1="6" x2="22" y2="6" stroke="#c9a961" stroke-width="3"/>
+          <text x="36" y="10" font-size="12" fill="#9a9a9a" letter-spacing="2" font-weight="400">TRAGEN BEIDES</text>
+          <text x="36" y="42" font-family="'Cormorant Garamond', serif" font-size="32" fill="#c9a961" font-weight="500">25%</text>
+          <text x="36" y="62" font-size="11" fill="#9a9a9a" font-weight="300">Smartwatch + traditionelle Uhr</text>
+          <text x="36" y="78" font-size="11" fill="#c9a961" font-weight="400" font-style="italic">Bei Frauen sogar &gt; 50%</text>
+
+          <line x1="0" y1="116" x2="22" y2="116" stroke="#5a5a62" stroke-width="3"/>
+          <text x="36" y="120" font-size="12" fill="#9a9a9a" letter-spacing="2" font-weight="400">NUR SMARTWATCH</text>
+          <text x="36" y="152" font-family="'Cormorant Garamond', serif" font-size="32" fill="#ededed" font-weight="500">30%</text>
+
+          <line x1="0" y1="196" x2="22" y2="196" stroke="#8a7644" stroke-width="3"/>
+          <text x="36" y="200" font-size="12" fill="#9a9a9a" letter-spacing="2" font-weight="400">NUR TRADITIONELL</text>
+          <text x="36" y="232" font-family="'Cormorant Garamond', serif" font-size="32" fill="#ededed" font-weight="500">26%</text>
+
+          <line x1="0" y1="276" x2="22" y2="276" stroke="#2a2a30" stroke-width="3"/>
+          <text x="36" y="280" font-size="12" fill="#6b6b6b" letter-spacing="2" font-weight="400">KEINE UHR</text>
+          <text x="36" y="312" font-family="'Cormorant Garamond', serif" font-size="32" fill="#6b6b6b" font-weight="500">19%</text>
+        </g>
+
+        <text x="450" y="535" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b6b6b" font-style="italic">Deloitte Swiss Watch Industry Study 2025 · n = 6.500 Konsumenten · 12 Märkte</text>
+      </svg>
+    </div>
+
+    <div class="takeaway"><strong>Erkenntnis —</strong> Jeder vierte Uhrenträger weltweit ist bereits Doppelnutzer. Bei Frauen liegt der Anteil über 50 %.</div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section>
+    <div class="section-head">
+      <div class="section-num">III</div>
+      <h2>Validierung durch Marktgröße</h2>
+    </div>
+    <p class="section-intro">Morgan Stanley stellt Rolex und Apple Watch in derselben Umsatzliga nebeneinander — ein starkes Signal aus der Finanzwelt, dass beide Marken denselben Premium-Käufer ansprechen.</p>
+
+    <div class="chart-card">
+      <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="rolexBar" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#d4b574"/>
+            <stop offset="100%" stop-color="#a08642"/>
+          </linearGradient>
+          <linearGradient id="appleBar" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#9a9aa0"/>
+            <stop offset="100%" stop-color="#6a6a70"/>
+          </linearGradient>
+        </defs>
+
+        <line x1="180" y1="440" x2="180" y2="100" stroke="#2a2a30" stroke-width="1"/>
+        <line x1="180" y1="440" x2="780" y2="440" stroke="#2a2a30" stroke-width="1"/>
+
+        <g stroke="#1c1c21" stroke-width="1" stroke-dasharray="2,4">
+          <line x1="180" y1="355" x2="780" y2="355"/>
+          <line x1="180" y1="270" x2="780" y2="270"/>
+          <line x1="180" y1="185" x2="780" y2="185"/>
+          <line x1="180" y1="100" x2="780" y2="100"/>
+        </g>
+
+        <g font-family="Inter, sans-serif" font-size="11" fill="#6b6b6b" text-anchor="end" font-weight="300">
+          <text x="168" y="445">0</text>
+          <text x="168" y="360">5</text>
+          <text x="168" y="275">10</text>
+          <text x="168" y="190">15</text>
+          <text x="168" y="105">20</text>
+        </g>
+
+        <text x="120" y="270" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6b6b6b" letter-spacing="2" font-weight="400" transform="rotate(-90, 120, 270)">UMSATZ · MRD. USD</text>
+
+        <rect x="280" y="90" width="140" height="350" fill="url(#rolexBar)"/>
+        <text x="350" y="80" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="28" fill="#c9a961" font-weight="500">20,6</text>
+        <text x="350" y="265" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="20" fill="#0e0e10" font-weight="600" letter-spacing="2">ROLEX</text>
+        <text x="350" y="285" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#0e0e10" font-style="italic" font-weight="400">Retail-Wert</text>
+        <text x="350" y="465" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#9a9a9a" letter-spacing="1.5" font-weight="400">SCHWEIZER LUXUSUHR</text>
+
+        <rect x="540" y="117" width="140" height="323" fill="url(#appleBar)"/>
+        <text x="610" y="107" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="28" fill="#ededed" font-weight="500">19,0</text>
+        <text x="610" y="265" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="20" fill="#0e0e10" font-weight="600" letter-spacing="2">APPLE WATCH</text>
+        <text x="610" y="285" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#0e0e10" font-style="italic" font-weight="400">Umsatz weltweit</text>
+        <text x="610" y="465" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#9a9a9a" letter-spacing="1.5" font-weight="400">SMARTWATCH</text>
+
+        <line x1="420" y1="60" x2="540" y2="60" stroke="#c9a961" stroke-width="0.5" stroke-opacity="0.4" stroke-dasharray="3,3"/>
+        <text x="480" y="50" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#c9a961" letter-spacing="2" font-style="italic" font-weight="400">vergleichbare Größenordnung</text>
+
+        <text x="450" y="525" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b6b6b" font-style="italic">Morgan Stanley / LuxeConsult · Swiss Watch Industry Report 2025</text>
+      </svg>
+    </div>
+
+    <div class="takeaway"><strong>Erkenntnis —</strong> Wenn die größte Investmentbank der Welt beide Marken in einem Atemzug nennt, ist das die externe Validierung der Kooperationsthese.</div>
+  </section>
+
+  <!-- ============================ -->
+  <!-- PART 2: TINOETTINO          -->
+  <!-- ============================ -->
+  <div class="part-divider">
+    <span class="part-label">Teil II — Was TINOetTINO einbringt</span>
+  </div>
+
+  <!-- SECTION 4 -->
+  <section>
+    <div class="section-head">
+      <div class="section-num">IV</div>
+      <h2>Vom Markt anerkannt</h2>
+    </div>
+    <p class="section-intro">Die führenden Stimmen der internationalen Uhren-Community haben TINOetTINO unabhängig voneinander als das beste Lederarmband für Rolex bezeichnet — in Qualität und Passgenauigkeit.</p>
+
+    <div class="quote-block">
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">Das beste Lederband für eine Rolex — in Qualität und Passgenauigkeit konkurrenzlos.</div>
+        <div class="quote-author">
+          <div class="quote-name">Marc Gebauer</div>
+          <div class="quote-role">Watch-Influencer · DACH</div>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">Unmatched in fit and craftsmanship — the benchmark for Rolex leather straps.</div>
+        <div class="quote-author">
+          <div class="quote-name">Giorgia Mondani</div>
+          <div class="quote-role">Watch-Expertin · International</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="takeaway"><strong>Erkenntnis —</strong> Das Produkt ist nicht nur intern gut — es ist von den glaubwürdigsten externen Stimmen der Branche als Referenz benannt worden.</div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section>
+    <div class="section-head">
+      <div class="section-num">V</div>
+      <h2>Assets &amp; Pro-Argumente</h2>
+    </div>
+    <p class="section-intro">TINOetTINO bringt mehr ein als ein Produkt — eine über Jahre aufgebaute Wertschöpfungskette aus Produktexpertise, Marktverständnis, Vertrieb und Marketing-Reichweite.</p>
+
+    <div class="asset-grid">
+
+      <div class="asset-card">
+        <div class="asset-card-head">
+          <div class="asset-icon">i</div>
+          <div class="asset-title">Produktentwicklung</div>
+        </div>
+        <ul class="asset-list">
+          <li>Langjährige Erfahrung mit Uhren, Modellen, Maßen, Herausforderungen</li>
+          <li>Hochwertige Lösungen für Bandanschlag, Inlay, Lederarmband, Schließen</li>
+          <li>High-Technology &amp; aufwändige Konstruktion</li>
+          <li>Sehr hohes Qualitätslevel mit Top-Feedback von Händlern und Kunden</li>
+          <li>Vermessung &amp; Daten der Rolex-Modelle</li>
+          <li>Zahlreiche Hersteller-Kontakte (Bandschließen, Titan-Inlay, etc.)</li>
+        </ul>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-head">
+          <div class="asset-icon">ii</div>
+          <div class="asset-title">Markt- &amp; Uhrenverständnis</div>
+        </div>
+        <ul class="asset-list">
+          <li>Tiefes Knowhow im Uhrenmarkt, vor allem Rolex</li>
+          <li>Expertennetzwerk &amp; -austausch (Foren, Communities)</li>
+          <li>Bedürfnisse Graumarkt &amp; Konzessionäre — DE, EU, USA</li>
+          <li>Enge Verbindungen zu Top-Influencern: Marc Gebauer, Watchragazzi, Giorgia Mondani</li>
+        </ul>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-head">
+          <div class="asset-icon">iii</div>
+          <div class="asset-title">Vertriebsnetzwerk</div>
+        </div>
+        <ul class="asset-list">
+          <li>Alle größeren Graumarkthändler — DE, EU, USA</li>
+          <li>Konzessionäre — DE, EU, USA</li>
+          <li>Direkte Kontakte: Rolex/Bucherer, Ex-Rolex-GM Hongkong</li>
+          <li>Unternehmenskontakte: Brabus &amp; weitere</li>
+          <li>Uhren-Influencer-Reichweite</li>
+          <li>Investorenzugang</li>
+        </ul>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-card-head">
+          <div class="asset-icon">iv</div>
+          <div class="asset-title">Marketing-Reichweite</div>
+        </div>
+        <ul class="asset-list">
+          <li>Auto-Rennsport-Szene</li>
+          <li>Robert Geiss &amp; weitere Personality-Brands</li>
+          <li>Automarken &amp; Supersportwagen-Bereich</li>
+          <li>Unternehmenspartner: Puma, Red Bull, FC Bayern, DJs</li>
+          <li>Skalierbar auf das gemeinsame Sortiment</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section>
+    <div class="section-head">
+      <div class="section-num">VI</div>
+      <h2>Status quo TINOetTINO</h2>
+    </div>
+    <p class="section-intro">Die Investments sind gemacht, das Produkt validiert. Bandwerk profitiert von einem Reifegrad, den ein Markteinstieg von null aus Jahre kosten würde.</p>
+
+    <div class="status-grid">
+      <div class="status-item">
+        <div class="label">Produktreife</div>
+        <p>Langjähriges Investment in Produktentwicklung — wesentlich komplexer als anfangs erwartet. <strong style="color:var(--gold);font-weight:500">Zeit &amp; Fehler können von Bandwerk übersprungen werden.</strong></p>
+      </div>
+      <div class="status-item">
+        <div class="label">Produktfeedback</div>
+        <p>Konsistent extrem positives Produktfeedback aus Handel und von Endkunden — über die gesamte Entwicklungszeit hinweg.</p>
+      </div>
+      <div class="status-item">
+        <div class="label">In Entwicklung</div>
+        <p>Produkt ist marktreif. Neue Lösungen für Inlay und diebstahlsichere Schließe sind aktuell <em>Work in Progress</em>.</p>
+      </div>
+      <div class="status-item">
+        <div class="label">Vertriebsfokus</div>
+        <p>Graumarkt-Fokus wurde temporär verschoben. Online-D2C ist gestartet, aber das operative Team war darin nicht erfahren — <strong style="color:var(--gold);font-weight:500">genau hier passt Bandwerk perfekt.</strong></p>
+      </div>
+      <div class="status-item">
+        <div class="label">Marktdynamik</div>
+        <p>Konzessionäre werden aus dem Rolex-Erstverkauf gedrängt — eine erhebliche Chance für hochwertige Rolex-Accessoires.</p>
+      </div>
+      <div class="status-item">
+        <div class="label">Wachstumspfad</div>
+        <p>Mass-Customizing als zusätzliche Chance — direkt anschlussfähig an Bandwerks D2C-Kompetenz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: VISION CUSTOMIZING -->
+  <section>
+    <div class="section-head">
+      <div class="section-num">VII</div>
+      <h2>Vision · Einzelstücke auf Bestellung</h2>
+    </div>
+    <p class="section-intro">Die strategische Zukunft von TINOetTINO ist nicht das konfektionierte Band, sondern das Einzelstück. Jeder Kunde gestaltet sein eigenes Armband — voll individuell, in Premium-Manufakturqualität.</p>
+
+    <div class="journey">
+      <div class="journey-intro">
+        <div class="label">Der Kunde wird zum Gestalter</div>
+        <h3>Ein Band, gefertigt für <em>genau diese</em> Rolex, in <em>genau diesem</em> Leder, mit <em>genau dieser</em> Geschichte.</h3>
+      </div>
+
+      <div class="journey-steps">
+        <div class="journey-step">
+          <div class="journey-circle">i</div>
+          <div class="step-label">Modell</div>
+          <div class="step-text">Das eigene Rolex-Modell auswählen</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-circle">ii</div>
+          <div class="step-label">Leder &amp; Farbe</div>
+          <div class="step-text">Lederart und Farbgebung wählen</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-circle">iii</div>
+          <div class="step-label">Garn &amp; Innenseite</div>
+          <div class="step-text">Garnfarbe und Bandinnenseite definieren</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-circle">iv</div>
+          <div class="step-label">Schließe</div>
+          <div class="step-text">Premium-Schließe konfigurieren</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-circle">v</div>
+          <div class="step-label">Gravur</div>
+          <div class="step-text">Persönlicher Text im Band</div>
+        </div>
+      </div>
+
+      <div class="journey-outro">
+        Kein Massenprodukt. Kein Lagerartikel.<br>
+        <span class="gold">Ein Unikat — wie die Uhr, die es trägt.</span>
+      </div>
+    </div>
+
+    <div class="takeaway"><strong>Erkenntnis —</strong> Mass-Customizing trifft auf Bandwerks D2C-Exzellenz: Die Konfigurations-Engine, das operative Setup und die Logistik sind genau die Kompetenzen, die Bandwerk bereits beherrscht. Eine ideale Aufgabenteilung.</div>
+  </section>
+
+  <!-- ============================ -->
+  <!-- PART 3: KOOPERATION         -->
+  <!-- ============================ -->
+  <div class="part-divider">
+    <span class="part-label">Teil III — Die strategische Chance</span>
+  </div>
+
+  <!-- FORMULA -->
+  <div class="formula">
+    <div class="formula-text">1 <span class="gold">+</span> 1 <span class="gold">=</span> 3</div>
+    <div class="formula-caption">Komplementäre Kompetenzen, kombinierter Marktwert</div>
+  </div>
+
+  <!-- SECTION 8 -->
+  <section>
+    <div class="section-head">
+      <div class="section-num">VIII</div>
+      <h2>Die strategischen Hebel</h2>
+    </div>
+    <p class="section-intro">Eine Partnerschaft, in der jede Seite das einbringt, was die andere am dringendsten braucht — und beide Seiten davon mehr profitieren als von eigenständigem Wachstum.</p>
+
+    <div class="opp-list">
+
+      <div class="opp-item">
+        <div class="opp-num">1</div>
+        <div class="opp-content">
+          <h3>Economies of Scale</h3>
+          <p>Direkt mehr Umsatzpotenzial mit dem bestehenden Setup — gemeinsame Strukturen, Lieferketten, Operations.</p>
+        </div>
+      </div>
+
+      <div class="opp-item">
+        <div class="opp-num">2</div>
+        <div class="opp-content">
+          <h3>Up-Selling für Bandwerk-Kunden</h3>
+          <p>Steigerung von AOV (Average Order Value) und CLV (Customer Lifetime Value) durch Premium-Sortiment für die Rolex-Welt.</p>
+        </div>
+      </div>
+
+      <div class="opp-item">
+        <div class="opp-num">3</div>
+        <div class="opp-content">
+          <h3>Cross-Selling über Käuferüberschneidung</h3>
+          <p>Rolex-Eigentümer besitzen häufig auch eine Apple Watch — dieselbe Person, zwei Produktwelten, ein Kundenkonto.</p>
+        </div>
+      </div>
+
+      <div class="opp-item">
+        <div class="opp-num">4</div>
+        <div class="opp-content">
+          <h3>Einstieg ins Luxus-Segment</h3>
+          <p>Höhere Multiples, höhere Margen, höhere Preisrealisierung — strukturelle Aufwertung des gemeinsamen Geschäfts.</p>
+        </div>
+      </div>
+
+      <div class="opp-item">
+        <div class="opp-num">5</div>
+        <div class="opp-content">
+          <h3>Aufwertung der Marke Bandwerk</h3>
+          <p>Aufbau einer zweiten, über D2C hinaus skalierbaren Marke. Substantielle Steigerung des Unternehmenswerts: 1+1=3.</p>
+        </div>
+      </div>
+
+      <div class="opp-item">
+        <div class="opp-num">6</div>
+        <div class="opp-content">
+          <h3>Leveraging der D2C-Kompetenz</h3>
+          <p>Bandwerks operatives Team und seine D2C-Erfahrung werden auf TeT skaliert — TeTs Schwachstelle wird zu Bandwerks Stärke.</p>
+        </div>
+      </div>
+
+      <div class="opp-item">
+        <div class="opp-num">7</div>
+        <div class="opp-content">
+          <h3>Handelsexpansion durch TeT-Netzwerk</h3>
+          <p>Bandwerks Sortiment erschließt den Fachhandel über das bestehende Konzessionärs- und Graumarkt-Netzwerk von TeT.</p>
+        </div>
+      </div>
+
+      <div class="opp-item">
+        <div class="opp-num">∞</div>
+        <div class="opp-content">
+          <h3>Schnellere Internationalisierung</h3>
+          <p>Auch für Apple-Watch-Bänder. Direkter Zugang zu USA, Asien und weiteren Premium-Märkten über TeTs internationale Kontakte.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <span class="label">Quellen Marktanalyse</span>
+    Deloitte Swiss Watch Industry Study 2025 · Morgan Stanley / LuxeConsult Swiss Watch Industry Report 2025 · Teads / EssenceMediacom Luxury Watch Study 2024 · Chrono24 / YouGov First-Time-Buyer Report 2024 · Counterpoint Research · Consumer Intelligence Research Partners (CIRP) · Statista Consumer Insights 2024.
+    <br><br>
+    Bandwerk × TINOetTINO · Strategischer Pitch · Mai 2026
+  </footer>
+
+</div>
+
+</body>
+</html>
